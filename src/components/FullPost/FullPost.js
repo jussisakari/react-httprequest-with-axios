@@ -10,7 +10,7 @@ class FullPost extends Component {
 
     // componentDidUpdate(prevProps, prevState) {
     //     if (this.props.id && prevProps.id !== this.props.id) {
-    //         const url = 'https://jsonplaceholder.typicode.com/posts/' + this.props.id;
+    //         const url = '/posts/' + this.props.id;
     //         axios.get(url)
     //             .then(response => {
     //                 this.setState({post: response.data});
@@ -21,7 +21,7 @@ class FullPost extends Component {
     componentDidUpdate() {
         if (this.props.id) {
             if (!this.state.post || (this.state.post && this.state.post.id !== this.props.id)) {
-                const url = 'https://jsonplaceholder.typicode.com/posts/' + this.props.id;
+                const url = '/posts/' + this.props.id;
                 axios.get(url)
                     .then(response => {
                         this.setState({post: response.data});
@@ -33,7 +33,7 @@ class FullPost extends Component {
     deletePostHandler = () => {
         alert("About to delete post " + this.props.id);
         if (this.props.id) {
-            const url = 'https://jsonplaceholder.typicode.com/posts/' + this.props.id;
+            const url = '/posts/' + this.props.id;
             axios.delete(url)
                 .then(response => {
                     console.log(response);
