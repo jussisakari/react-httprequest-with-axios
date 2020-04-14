@@ -12,7 +12,7 @@ class NewPost extends Component {
 
     postDataHandler = () => {
         alert("about to post");
-        axios.post('https://jsonplaceholder.typicode.com/posts', {
+        axios.post('/posts', {
             title: this.state.title,
             body: this.state.content,
             author: this.state.author
