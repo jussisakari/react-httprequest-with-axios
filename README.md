@@ -1,1 +1,3 @@
-Playing around with Axios and HTTP requests
+Playing around with React
+- Axios for REST
+- Routing
