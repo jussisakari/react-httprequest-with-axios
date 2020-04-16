@@ -10,6 +10,10 @@ class NewPost extends Component {
         author: 'Max'
     }
 
+    componentDidMount() {
+        console.log(this.props);
+    }
+
     postDataHandler = () => {
         alert("about to post");
         axios.post('/posts', {
