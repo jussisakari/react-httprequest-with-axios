@@ -26,8 +26,8 @@ const responseInterceptor = axios.interceptors.response.use(response => {
 });
 
 // Remove interceptors
-// axios.interceptors.request.eject(requestInterceptor);
-// axios.interceptors.response.eject(responseInterceptor);
+axios.interceptors.request.eject(requestInterceptor);
+axios.interceptors.response.eject(responseInterceptor);
 
 ReactDOM.render( <App />, document.getElementById( 'root' ) );
 registerServiceWorker();
